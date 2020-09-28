@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>code</key>
+        <dict>
+            <key>code1</key>
+            <string>1672F7F9C2129F8B94C1C270CF0B4B1B</string>
+            <key>code2</key>
+            <string>B2C6801344096561E920B6605F5AE1F4</string>
+            <key>code3</key>
+            <string>65E06DDE12F748BCF9DE9E06BF4A4148</string>
+            <key>code4</key>
+            <string>A3CA1A4DE8BBFF2F162AFF31A48F29AF</string>
+        </dict>
+        <key>client</key>
+        <dict>
+            <key>cp_id</key>
+            <string>890090000023105926</string>
+            <key>product_id</key>
+            <string>736430079244651991</string>
+            <key>client_id</key>
+            <string>461499785153610816</string>
+            <key>client_secret</key>
+            <string>[!008374FFDF832BAA16881309243325B70F81F45D1F97B5A4CF1E60AB26CBE1D60210F4E03AE2EBC929FC6A9950056D130F60FD2A1DFDF2D81382AA61F38E60A0098C00961B7FD96EEFBCF5F5D5A60A4F8742638830C2C685FF0F7AF57999248C3F]</string>
+            <key>app_id</key>
+            <string>9105385871710957767</string>
+            <key>package_name</key>
+            <string>com.ea.Auth-Service</string>
+            <key>api_key</key>
+            <string>CgB6e3x9exoFnM0QnKfygPHrEhVI+UmO8VOvMnzpR/rpnoQgy0GCrUop+q7JSupvQfSbEyTB8DYbK5uK91fQQZgG</string>
+        </dict>
+        <key>service</key>
+        <dict/>
+    </dict>
+</plist>
