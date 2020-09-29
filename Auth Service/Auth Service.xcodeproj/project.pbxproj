@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		04295BA2252339D3005FC3A9 /* NSErrorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04295BA1252339D3005FC3A9 /* NSErrorExtensions.swift */; };
+		04295BA82523516C005FC3A9 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04295BA72523516C005FC3A9 /* EmailViewController.swift */; };
 		0444FB4925220648001E94AE /* PhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444FB4825220648001E94AE /* PhoneNumberViewController.swift */; };
+		04AADC23252355D00037F082 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AADC22252355D00037F082 /* UIViewControllerExtension.swift */; };
 		04D7FB242521E85900CC9619 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7FB232521E85900CC9619 /* AppDelegate.swift */; };
 		04D7FB262521E85900CC9619 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7FB252521E85900CC9619 /* SceneDelegate.swift */; };
 		04D7FB282521E85900CC9619 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7FB272521E85900CC9619 /* ViewController.swift */; };
@@ -21,7 +23,9 @@
 
 /* Begin PBXFileReference section */
 		04295BA1252339D3005FC3A9 /* NSErrorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSErrorExtensions.swift; sourceTree = "<group>"; };
+		04295BA72523516C005FC3A9 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		0444FB4825220648001E94AE /* PhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberViewController.swift; sourceTree = "<group>"; };
+		04AADC22252355D00037F082 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		04D7FB202521E85900CC9619 /* Auth Service.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Auth Service.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D7FB232521E85900CC9619 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04D7FB252521E85900CC9619 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +52,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04295BA525235144005FC3A9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				04295BA1252339D3005FC3A9 /* NSErrorExtensions.swift */,
+				04AADC22252355D00037F082 /* UIViewControllerExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		04295BA625235155005FC3A9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				04D7FB272521E85900CC9619 /* ViewController.swift */,
+				0444FB4825220648001E94AE /* PhoneNumberViewController.swift */,
+				04295BA72523516C005FC3A9 /* EmailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		04D7FB172521E85900CC9619 = {
 			isa = PBXGroup;
 			children = (
@@ -69,11 +92,10 @@
 		04D7FB222521E85900CC9619 /* Auth Service */ = {
 			isa = PBXGroup;
 			children = (
-				04295BA1252339D3005FC3A9 /* NSErrorExtensions.swift */,
 				04D7FB232521E85900CC9619 /* AppDelegate.swift */,
 				04D7FB252521E85900CC9619 /* SceneDelegate.swift */,
-				04D7FB272521E85900CC9619 /* ViewController.swift */,
-				0444FB4825220648001E94AE /* PhoneNumberViewController.swift */,
+				04295BA525235144005FC3A9 /* Extensions */,
+				04295BA625235155005FC3A9 /* Controllers */,
 				04D7FB292521E85900CC9619 /* Main.storyboard */,
 				04D7FB2C2521E85C00CC9619 /* Assets.xcassets */,
 				04D7FB2E2521E85C00CC9619 /* LaunchScreen.storyboard */,
@@ -216,9 +238,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0444FB4925220648001E94AE /* PhoneNumberViewController.swift in Sources */,
+				04295BA82523516C005FC3A9 /* EmailViewController.swift in Sources */,
 				04D7FB282521E85900CC9619 /* ViewController.swift in Sources */,
 				04295BA2252339D3005FC3A9 /* NSErrorExtensions.swift in Sources */,
 				04D7FB242521E85900CC9619 /* AppDelegate.swift in Sources */,
+				04AADC23252355D00037F082 /* UIViewControllerExtension.swift in Sources */,
 				04D7FB262521E85900CC9619 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

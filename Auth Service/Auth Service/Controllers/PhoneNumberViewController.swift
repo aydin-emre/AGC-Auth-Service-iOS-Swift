@@ -16,7 +16,6 @@ class PhoneNumberViewController: UIViewController {
     @IBOutlet var geoCodeTextField: UITextField!
     @IBOutlet var phoneNumberTextField: UITextField!
     @IBOutlet var verificationCodeTextField: UITextField!
-    
     @IBOutlet var obtainCodeButton: UIButton!
     @IBOutlet var signInButton: UIButton!
     @IBOutlet var signOutButton: UIButton!
@@ -32,11 +31,7 @@ class PhoneNumberViewController: UIViewController {
         
         settings = AGCVerifyCodeSettings(action: .registerLogin, locale: nil, sendInterval: 30)
         
-        setSignInOut()
-        
-        geoCodeTextField.text = "90"
-        phoneNumberTextField.text = "5393596373"
-        
+        setSignInOutVisibility()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -80,12 +75,12 @@ class PhoneNumberViewController: UIViewController {
             } else if verificationCode.isEmpty {
                 showAlert(with: "Enter verify code!")
             } else {
-                AGCAuth().createUser(withCountryCode: geoCode, phoneNumber: phoneNumber, password: "", verifyCode: verificationCode).onSuccess { (result) in
+                AGCAuth().createUser(withCountryCode: geoCode, phoneNumber: phoneNumber, password: nil, verifyCode: verificationCode).onSuccess { (result) in
                     // onSuccess
                     if let result = result {
                         let user = result.user
-                        self.showAlert(with: "You are registered as \(user.phone!)")
-                        self.setSignInOut()
+                        self.showAlert(with: "You are registered: \(user.phone!)")
+                        self.setSignInOutVisibility()
                     }
                 }.onFailure { (error) in
                     // onFail
@@ -102,17 +97,17 @@ class PhoneNumberViewController: UIViewController {
     
     @IBAction func signOutButton(_ sender: UIButton) {
         AGCAuth().signOut()
-        setSignInOut()
+        setSignInOutVisibility()
     }
     
     func login(with geoCode: String, _ phoneNumber: String, _ verificationCode: String) {
-        let credential = AGCPhoneAuthProvider.credential(withCountryCode: geoCode, phoneNumber: phoneNumber, password: "", verifyCode: verificationCode)
+        let credential = AGCPhoneAuthProvider.credential(withCountryCode: geoCode, phoneNumber: phoneNumber, password: nil, verifyCode: verificationCode)
 
         AGCAuth().signIn(credential: credential).onSuccess { (agcSignInResult) in
             if let result = agcSignInResult {
                 let user = result.user
-                self.showAlert(with: "You are logged in as \(user.phone!)")
-                self.setSignInOut()
+                self.showAlert(with: "You are logged in: \(user.phone!)")
+                self.setSignInOutVisibility()
             }
         }.onFailure { (error) in
             print("******* Error: \(error)")
@@ -120,10 +115,10 @@ class PhoneNumberViewController: UIViewController {
         }
     }
     
-    func setSignInOut() {
+    func setSignInOutVisibility() {
         if let user = AGCAuth().currentUser {
             if let phoneNumber = user.phone {
-                titleLabel.text = "Signed in as \(phoneNumber)"
+                titleLabel.text = "Signed in: \(phoneNumber)"
             }
             phoneNumberStackView.isHidden = true
             verificationStackView.isHidden = true
@@ -157,27 +152,5 @@ class PhoneNumberViewController: UIViewController {
         obtainCodeButton.isUserInteractionEnabled = true
         obtainCodeButton.setTitleColor(.systemBlue, for: .normal)
     }
-
-    func timeFormatted(_ totalSeconds: Int) -> String {
-        let seconds = totalSeconds % 60
-        let minutes = (totalSeconds / 60) % 60
-        return String(format: "%02d:%02d", minutes, seconds)
-    }
-    
-    func showAlert(with message: String) {
-        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
