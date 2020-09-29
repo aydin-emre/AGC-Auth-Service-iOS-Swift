@@ -7,17 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04295BA2252339D3005FC3A9 /* NSErrorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04295BA1252339D3005FC3A9 /* NSErrorExtensions.swift */; };
+		0444FB4925220648001E94AE /* PhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444FB4825220648001E94AE /* PhoneNumberViewController.swift */; };
 		04D7FB242521E85900CC9619 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7FB232521E85900CC9619 /* AppDelegate.swift */; };
 		04D7FB262521E85900CC9619 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7FB252521E85900CC9619 /* SceneDelegate.swift */; };
 		04D7FB282521E85900CC9619 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7FB272521E85900CC9619 /* ViewController.swift */; };
 		04D7FB2B2521E85900CC9619 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D7FB292521E85900CC9619 /* Main.storyboard */; };
 		04D7FB2D2521E85C00CC9619 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04D7FB2C2521E85C00CC9619 /* Assets.xcassets */; };
 		04D7FB302521E85C00CC9619 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D7FB2E2521E85C00CC9619 /* LaunchScreen.storyboard */; };
-		04D7FB412521EBEE00CC9619 /* agconnect-services.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04D7FB402521EBEE00CC9619 /* agconnect-services.plist */; };
+		04D7FB5A2521FC9400CC9619 /* agconnect-services.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04D7FB592521FC9400CC9619 /* agconnect-services.plist */; };
 		677D4E22B6CFB8AD5F780704 /* Pods_Auth_Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E548FA9518F7797843D7CD45 /* Pods_Auth_Service.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04295BA1252339D3005FC3A9 /* NSErrorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSErrorExtensions.swift; sourceTree = "<group>"; };
+		0444FB4825220648001E94AE /* PhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberViewController.swift; sourceTree = "<group>"; };
 		04D7FB202521E85900CC9619 /* Auth Service.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Auth Service.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D7FB232521E85900CC9619 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04D7FB252521E85900CC9619 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,7 +30,7 @@
 		04D7FB2C2521E85C00CC9619 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04D7FB2F2521E85C00CC9619 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04D7FB312521E85C00CC9619 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04D7FB402521EBEE00CC9619 /* agconnect-services.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "agconnect-services.plist"; sourceTree = "<group>"; };
+		04D7FB592521FC9400CC9619 /* agconnect-services.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "agconnect-services.plist"; sourceTree = "<group>"; };
 		6B6A9541C83FD0D6C9E8FA0B /* Pods-Auth Service.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Auth Service.release.xcconfig"; path = "Target Support Files/Pods-Auth Service/Pods-Auth Service.release.xcconfig"; sourceTree = "<group>"; };
 		C735B9DEE0E583A5CFE0A0AF /* Pods-Auth Service.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Auth Service.debug.xcconfig"; path = "Target Support Files/Pods-Auth Service/Pods-Auth Service.debug.xcconfig"; sourceTree = "<group>"; };
 		E548FA9518F7797843D7CD45 /* Pods_Auth_Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Auth_Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,14 +69,16 @@
 		04D7FB222521E85900CC9619 /* Auth Service */ = {
 			isa = PBXGroup;
 			children = (
+				04295BA1252339D3005FC3A9 /* NSErrorExtensions.swift */,
 				04D7FB232521E85900CC9619 /* AppDelegate.swift */,
 				04D7FB252521E85900CC9619 /* SceneDelegate.swift */,
 				04D7FB272521E85900CC9619 /* ViewController.swift */,
+				0444FB4825220648001E94AE /* PhoneNumberViewController.swift */,
 				04D7FB292521E85900CC9619 /* Main.storyboard */,
 				04D7FB2C2521E85C00CC9619 /* Assets.xcassets */,
 				04D7FB2E2521E85C00CC9619 /* LaunchScreen.storyboard */,
 				04D7FB312521E85C00CC9619 /* Info.plist */,
-				04D7FB402521EBEE00CC9619 /* agconnect-services.plist */,
+				04D7FB592521FC9400CC9619 /* agconnect-services.plist */,
 			);
 			path = "Auth Service";
 			sourceTree = "<group>";
@@ -154,7 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04D7FB302521E85C00CC9619 /* LaunchScreen.storyboard in Resources */,
-				04D7FB412521EBEE00CC9619 /* agconnect-services.plist in Resources */,
+				04D7FB5A2521FC9400CC9619 /* agconnect-services.plist in Resources */,
 				04D7FB2D2521E85C00CC9619 /* Assets.xcassets in Resources */,
 				04D7FB2B2521E85900CC9619 /* Main.storyboard in Resources */,
 			);
@@ -209,7 +215,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0444FB4925220648001E94AE /* PhoneNumberViewController.swift in Sources */,
 				04D7FB282521E85900CC9619 /* ViewController.swift in Sources */,
+				04295BA2252339D3005FC3A9 /* NSErrorExtensions.swift in Sources */,
 				04D7FB242521E85900CC9619 /* AppDelegate.swift in Sources */,
 				04D7FB262521E85900CC9619 /* SceneDelegate.swift in Sources */,
 			);

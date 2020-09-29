@@ -5,13 +5,20 @@
         <key>code</key>
         <dict>
             <key>code1</key>
-            <string>1672F7F9C2129F8B94C1C270CF0B4B1B</string>
+            <string>C21991A71BA20C2A07A547C4DFF55DC6</string>
             <key>code2</key>
-            <string>B2C6801344096561E920B6605F5AE1F4</string>
+            <string>A25013AF3A64A0DF2EEDDFD993A660BD</string>
             <key>code3</key>
-            <string>65E06DDE12F748BCF9DE9E06BF4A4148</string>
+            <string>4B058ECAE2828BB062EBDFFC40D1186F</string>
             <key>code4</key>
-            <string>A3CA1A4DE8BBFF2F162AFF31A48F29AF</string>
+            <string>FE15493F5807A7D1293E448881CACF27</string>
+        </dict>
+        <key>agcgw</key>
+        <dict>
+            <key>backurl</key>
+            <string>connect-dre.dbankcloud.cn</string>
+            <key>url</key>
+            <string>connect-dre.hispace.hicloud.com</string>
         </dict>
         <key>client</key>
         <dict>
@@ -22,7 +29,7 @@
             <key>client_id</key>
             <string>461499785153610816</string>
             <key>client_secret</key>
-            <string>[!008374FFDF832BAA16881309243325B70F81F45D1F97B5A4CF1E60AB26CBE1D60210F4E03AE2EBC929FC6A9950056D130F60FD2A1DFDF2D81382AA61F38E60A0098C00961B7FD96EEFBCF5F5D5A60A4F8742638830C2C685FF0F7AF57999248C3F]</string>
+            <string>[!003B2BAE21F72D1B9B853BF1792A684D33EF29E6BDE923D460E0A61B232ABF35E98625B0403DD115FAE1F7F680489D180ABCD1C0D3D3BD9F7A657709DEEC68179C4D7110A346B70576FEB099255F5E79C2E6249C699E42A9AE0137815DEDC14E7B]</string>
             <key>app_id</key>
             <string>9105385871710957767</string>
             <key>package_name</key>
@@ -31,6 +38,26 @@
             <string>CgB6e3x9exoFnM0QnKfygPHrEhVI+UmO8VOvMnzpR/rpnoQgy0GCrUop+q7JSupvQfSbEyTB8DYbK5uK91fQQZgG</string>
         </dict>
         <key>service</key>
-        <dict/>
+        <dict>
+            <key>analytics</key>
+            <dict>
+                <key>collector_url</key>
+                <string>datacollector-dre.dt.hicloud.com,datacollector-dre.dt.dbankcloud.cn</string>
+                <key>resource_id</key>
+                <string>p1</string>
+                <key>channel_id</key>
+                <string/>
+            </dict>
+            <key>ml</key>
+            <dict>
+                <key>mlservice_url</key>
+                <string>ml-api-dre.ai.dbankcloud.com,ml-api-dre.ai.dbankcloud.cn</string>
+            </dict>
+            <key>cloudstorage</key>
+            <dict>
+                <key>storage_url</key>
+                <string>https://ops-dre.agcstorage.link</string>
+            </dict>
+        </dict>
     </dict>
 </plist>
