@@ -8,5 +8,8 @@ target 'Auth Service' do
   # Pods for Auth Service
   pod 'AGConnectAuth'
   pod 'AGConnectCore'
+  pod 'GoogleSignIn'
+  pod 'FBSDKLoginKit'
+  pod 'Swifter', :git => "https://github.com/mattdonnelly/Swifter.git"
 
 end

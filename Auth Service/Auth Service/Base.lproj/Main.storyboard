@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="quX-cp-BWI">
-                                <rect key="frame" x="94" y="400.5" width="226" height="95"/>
+                                <rect key="frame" x="92" y="309" width="230" height="278"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ih7-ag-LDs">
-                                        <rect key="frame" x="0.0" y="0.0" width="226" height="36"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="230" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Login with Phone Number"/>
                                         <connections>
@@ -28,11 +28,37 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAh-YL-Eht">
-                                        <rect key="frame" x="0.0" y="59" width="226" height="36"/>
+                                        <rect key="frame" x="0.0" y="59" width="230" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Login with Email"/>
                                         <connections>
                                             <segue destination="UWn-ex-lH0" kind="show" id="gfI-bN-DDb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHh-59-AMW">
+                                        <rect key="frame" x="0.0" y="118" width="230" height="46"/>
+                                        <state key="normal" image="sign-in-with-google"/>
+                                        <connections>
+                                            <segue destination="esZ-4V-VDp" kind="show" id="NDf-Tf-YDg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtp-af-AqJ">
+                                        <rect key="frame" x="0.0" y="187" width="230" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="230" id="dPm-Ol-6DV"/>
+                                            <constraint firstAttribute="height" constant="40" id="ukH-Gm-bCw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" image="sign-in-with-facebook"/>
+                                        <connections>
+                                            <segue destination="CqE-qN-1uK" kind="show" id="6rs-1q-CTa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlf-Qf-H82">
+                                        <rect key="frame" x="0.0" y="250" width="230" height="28"/>
+                                        <state key="normal" image="sign-in-with-twitter"/>
+                                        <connections>
+                                            <segue destination="0Jx-ME-gVg" kind="show" id="Pj1-jx-00R"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -200,7 +226,6 @@
                                         <state key="normal" title="Sign In"/>
                                         <connections>
                                             <action selector="signInButton:" destination="UWn-ex-lH0" eventType="touchUpInside" id="abC-iP-eBU"/>
-                                            <action selector="signInButton:" destination="UuH-z4-PS4" eventType="touchUpInside" id="g39-AO-p2v"/>
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uk8-Li-Swd">
@@ -209,7 +234,6 @@
                                         <state key="normal" title="Sign Out"/>
                                         <connections>
                                             <action selector="signOutButton:" destination="UWn-ex-lH0" eventType="touchUpInside" id="8vi-Ht-RzI"/>
-                                            <action selector="signOutButton:" destination="UuH-z4-PS4" eventType="touchUpInside" id="saa-jS-Rop"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -239,6 +263,134 @@
             </objects>
             <point key="canvasLocation" x="2957" y="113"/>
         </scene>
+        <!--Google Account View Controller-->
+        <scene sceneID="3zo-xh-a5t">
+            <objects>
+                <viewController id="esZ-4V-VDp" customClass="GoogleAccountViewController" customModule="Auth_Service" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ojl-7j-9Zc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="qM9-cF-Tc5">
+                                <rect key="frame" x="23" y="138" width="368" height="83"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in with Google" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="be6-n4-jie">
+                                        <rect key="frame" x="0.0" y="0.0" width="368" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNT-gq-eXA">
+                                        <rect key="frame" x="0.0" y="47" width="368" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Sign In"/>
+                                        <connections>
+                                            <action selector="signInButton:" destination="esZ-4V-VDp" eventType="touchUpInside" id="8bH-V6-fOp"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vzy-cY-K8a">
+                                        <rect key="frame" x="0.0" y="83" width="368" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Sign Out"/>
+                                        <connections>
+                                            <action selector="signOutButton:" destination="esZ-4V-VDp" eventType="touchUpInside" id="AWm-wX-7f5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7eQ-mm-slt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qM9-cF-Tc5" firstAttribute="top" secondItem="7eQ-mm-slt" secondAttribute="top" constant="50" id="923-wh-dxp"/>
+                            <constraint firstItem="qM9-cF-Tc5" firstAttribute="leading" secondItem="7eQ-mm-slt" secondAttribute="leading" constant="23" id="Nxh-zX-3Zc"/>
+                            <constraint firstItem="7eQ-mm-slt" firstAttribute="trailing" secondItem="qM9-cF-Tc5" secondAttribute="trailing" constant="23" id="srX-as-MVK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dJ1-VM-PFu"/>
+                    <connections>
+                        <outlet property="signInButton" destination="CNT-gq-eXA" id="AlM-OI-Gl0"/>
+                        <outlet property="signOutButton" destination="Vzy-cY-K8a" id="eec-0C-YTA"/>
+                        <outlet property="titleLabel" destination="be6-n4-jie" id="fDD-3P-rk0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kD3-T9-FjY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3884" y="113"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2OK-nT-TBH">
+            <objects>
+                <viewController id="CqE-qN-1uK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q3Z-vr-bWy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="qud-4o-h79"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="U2M-OZ-H6g"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gyh-az-g8D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4820" y="113"/>
+        </scene>
+        <!--Twitter Account View Controller-->
+        <scene sceneID="GeC-7y-Xap">
+            <objects>
+                <viewController id="0Jx-ME-gVg" customClass="TwitterAccountViewController" customModule="Auth_Service" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VxO-7K-x2K">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="7pk-ne-51m">
+                                <rect key="frame" x="23" y="138" width="368" height="83"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in with Twitter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXD-YX-DcI">
+                                        <rect key="frame" x="0.0" y="0.0" width="368" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sab-hF-xfF">
+                                        <rect key="frame" x="0.0" y="47" width="368" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Sign In"/>
+                                        <connections>
+                                            <action selector="signInButton:" destination="0Jx-ME-gVg" eventType="touchUpInside" id="WhE-Av-GFd"/>
+                                            <action selector="signInButton:" destination="esZ-4V-VDp" eventType="touchUpInside" id="n9q-C3-Ukd"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7c-F9-wiA">
+                                        <rect key="frame" x="0.0" y="83" width="368" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Sign Out"/>
+                                        <connections>
+                                            <action selector="signOutButton:" destination="0Jx-ME-gVg" eventType="touchUpInside" id="5uV-sX-o2p"/>
+                                            <action selector="signOutButton:" destination="esZ-4V-VDp" eventType="touchUpInside" id="sI2-cn-lnm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6FN-g8-R9X"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7pk-ne-51m" firstAttribute="top" secondItem="6FN-g8-R9X" secondAttribute="top" constant="50" id="AOa-SZ-7S2"/>
+                            <constraint firstItem="6FN-g8-R9X" firstAttribute="trailing" secondItem="7pk-ne-51m" secondAttribute="trailing" constant="23" id="NRS-x5-voy"/>
+                            <constraint firstItem="7pk-ne-51m" firstAttribute="leading" secondItem="6FN-g8-R9X" secondAttribute="leading" constant="23" id="eiQ-dm-cl2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vF7-IG-gmC"/>
+                    <connections>
+                        <outlet property="signInButton" destination="sab-hF-xfF" id="UCw-bM-sFa"/>
+                        <outlet property="signOutButton" destination="A7c-F9-wiA" id="56p-Gi-n8f"/>
+                        <outlet property="titleLabel" destination="TXD-YX-DcI" id="8zi-Hi-N5R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HDY-HL-W81" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5761" y="113"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="W0f-ZJ-6g9">
             <objects>
@@ -259,6 +411,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="sign-in-with-facebook" width="988" height="160"/>
+        <image name="sign-in-with-google" width="191" height="46"/>
+        <image name="sign-in-with-twitter" width="158" height="28"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

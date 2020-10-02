@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0410D3B82524A4650020D5CD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0410D3B72524A4650020D5CD /* GoogleService-Info.plist */; };
+		0410D3BB2524A9840020D5CD /* GoogleAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0410D3BA2524A9840020D5CD /* GoogleAccountViewController.swift */; };
 		04295BA2252339D3005FC3A9 /* NSErrorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04295BA1252339D3005FC3A9 /* NSErrorExtensions.swift */; };
 		04295BA82523516C005FC3A9 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04295BA72523516C005FC3A9 /* EmailViewController.swift */; };
 		0444FB4925220648001E94AE /* PhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444FB4825220648001E94AE /* PhoneNumberViewController.swift */; };
 		04AADC23252355D00037F082 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AADC22252355D00037F082 /* UIViewControllerExtension.swift */; };
+		04C11C562527294D002D26CF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C11C552527294D002D26CF /* Constants.swift */; };
+		04C11C6D252756B4002D26CF /* TwitterAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C11C6C252756B4002D26CF /* TwitterAccountViewController.swift */; };
 		04D7FB242521E85900CC9619 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7FB232521E85900CC9619 /* AppDelegate.swift */; };
 		04D7FB262521E85900CC9619 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7FB252521E85900CC9619 /* SceneDelegate.swift */; };
 		04D7FB282521E85900CC9619 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7FB272521E85900CC9619 /* ViewController.swift */; };
@@ -22,10 +26,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0410D3B72524A4650020D5CD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0410D3BA2524A9840020D5CD /* GoogleAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAccountViewController.swift; sourceTree = "<group>"; };
 		04295BA1252339D3005FC3A9 /* NSErrorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSErrorExtensions.swift; sourceTree = "<group>"; };
 		04295BA72523516C005FC3A9 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		0444FB4825220648001E94AE /* PhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberViewController.swift; sourceTree = "<group>"; };
 		04AADC22252355D00037F082 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		04C11C552527294D002D26CF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		04C11C6C252756B4002D26CF /* TwitterAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAccountViewController.swift; sourceTree = "<group>"; };
 		04D7FB202521E85900CC9619 /* Auth Service.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Auth Service.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D7FB232521E85900CC9619 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04D7FB252521E85900CC9619 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +75,8 @@
 				04D7FB272521E85900CC9619 /* ViewController.swift */,
 				0444FB4825220648001E94AE /* PhoneNumberViewController.swift */,
 				04295BA72523516C005FC3A9 /* EmailViewController.swift */,
+				0410D3BA2524A9840020D5CD /* GoogleAccountViewController.swift */,
+				04C11C6C252756B4002D26CF /* TwitterAccountViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -94,6 +104,7 @@
 			children = (
 				04D7FB232521E85900CC9619 /* AppDelegate.swift */,
 				04D7FB252521E85900CC9619 /* SceneDelegate.swift */,
+				04C11C552527294D002D26CF /* Constants.swift */,
 				04295BA525235144005FC3A9 /* Extensions */,
 				04295BA625235155005FC3A9 /* Controllers */,
 				04D7FB292521E85900CC9619 /* Main.storyboard */,
@@ -101,6 +112,7 @@
 				04D7FB2E2521E85C00CC9619 /* LaunchScreen.storyboard */,
 				04D7FB312521E85C00CC9619 /* Info.plist */,
 				04D7FB592521FC9400CC9619 /* agconnect-services.plist */,
+				0410D3B72524A4650020D5CD /* GoogleService-Info.plist */,
 			);
 			path = "Auth Service";
 			sourceTree = "<group>";
@@ -134,6 +146,7 @@
 				04D7FB1D2521E85900CC9619 /* Frameworks */,
 				04D7FB1E2521E85900CC9619 /* Resources */,
 				6B225C5C352B2930D738730E /* [CP] Copy Pods Resources */,
+				FAB0E88C6FE7E2549C584AF7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -183,6 +196,7 @@
 			files = (
 				04D7FB302521E85C00CC9619 /* LaunchScreen.storyboard in Resources */,
 				04D7FB5A2521FC9400CC9619 /* agconnect-services.plist in Resources */,
+				0410D3B82524A4650020D5CD /* GoogleService-Info.plist in Resources */,
 				04D7FB2D2521E85C00CC9619 /* Assets.xcassets in Resources */,
 				04D7FB2B2521E85900CC9619 /* Main.storyboard in Resources */,
 			);
@@ -230,6 +244,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FAB0E88C6FE7E2549C584AF7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Auth Service/Pods-Auth Service-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Auth Service/Pods-Auth Service-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Auth Service/Pods-Auth Service-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -241,9 +272,12 @@
 				04295BA82523516C005FC3A9 /* EmailViewController.swift in Sources */,
 				04D7FB282521E85900CC9619 /* ViewController.swift in Sources */,
 				04295BA2252339D3005FC3A9 /* NSErrorExtensions.swift in Sources */,
+				04C11C6D252756B4002D26CF /* TwitterAccountViewController.swift in Sources */,
 				04D7FB242521E85900CC9619 /* AppDelegate.swift in Sources */,
 				04AADC23252355D00037F082 /* UIViewControllerExtension.swift in Sources */,
 				04D7FB262521E85900CC9619 /* SceneDelegate.swift in Sources */,
+				0410D3BB2524A9840020D5CD /* GoogleAccountViewController.swift in Sources */,
+				04C11C562527294D002D26CF /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

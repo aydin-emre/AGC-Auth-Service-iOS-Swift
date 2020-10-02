@@ -5,25 +5,78 @@ PODS:
     - HMFoundation (~> 1.1.0)
   - AGConnectCredential (1.1.0.300):
     - AGConnectCore (~> 1.1.0)
+  - AppAuth (1.4.0):
+    - AppAuth/Core (= 1.4.0)
+    - AppAuth/ExternalUserAgent (= 1.4.0)
+  - AppAuth/Core (1.4.0)
+  - AppAuth/ExternalUserAgent (1.4.0)
+  - FBSDKCoreKit (8.0.0):
+    - FBSDKCoreKit/Basics (= 8.0.0)
+    - FBSDKCoreKit/Core (= 8.0.0)
+  - FBSDKCoreKit/Basics (8.0.0)
+  - FBSDKCoreKit/Core (8.0.0):
+    - FBSDKCoreKit/Basics
+  - FBSDKLoginKit (8.0.0):
+    - FBSDKLoginKit/Login (= 8.0.0)
+  - FBSDKLoginKit/Login (8.0.0):
+    - FBSDKCoreKit (~> 8.0.0)
+  - GoogleSignIn (5.0.2):
+    - AppAuth (~> 1.2)
+    - GTMAppAuth (~> 1.0)
+    - GTMSessionFetcher/Core (~> 1.1)
+  - GTMAppAuth (1.1.0):
+    - AppAuth/Core (~> 1.4)
+    - GTMSessionFetcher (~> 1.4)
+  - GTMSessionFetcher (1.4.0):
+    - GTMSessionFetcher/Full (= 1.4.0)
+  - GTMSessionFetcher/Core (1.4.0)
+  - GTMSessionFetcher/Full (1.4.0):
+    - GTMSessionFetcher/Core (= 1.4.0)
   - HMFoundation (1.1.0.300)
+  - Swifter (2.4.0)
 
 DEPENDENCIES:
   - AGConnectAuth
   - AGConnectCore
+  - FBSDKLoginKit
+  - GoogleSignIn
+  - Swifter (from `https://github.com/mattdonnelly/Swifter.git`)
 
 SPEC REPOS:
   trunk:
     - AGConnectAuth
     - AGConnectCore
     - AGConnectCredential
+    - AppAuth
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - GoogleSignIn
+    - GTMAppAuth
+    - GTMSessionFetcher
     - HMFoundation
+
+EXTERNAL SOURCES:
+  Swifter:
+    :git: https://github.com/mattdonnelly/Swifter.git
+
+CHECKOUT OPTIONS:
+  Swifter:
+    :commit: 7906c9476f612fc2a77c38f4731d4bc618cea6a8
+    :git: https://github.com/mattdonnelly/Swifter.git
 
 SPEC CHECKSUMS:
   AGConnectAuth: 7be4e14396bf8b5c6db92a2fb68c42ed27aa0b0b
   AGConnectCore: 9884a3fddf1960747eaf0a115362a1484d7149b1
   AGConnectCredential: ff21e5397e87ccbdec650b31ff93205325da9c91
+  AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
+  FBSDKCoreKit: 9d27fe97a2fa2abe5eeefea8240e837623ab88e0
+  FBSDKLoginKit: 2cbaf5405379731b22f2ebc224f7c30f62378171
+  GoogleSignIn: 7137d297ddc022a7e0aa4619c86d72c909fa7213
+  GTMAppAuth: 197a8dabfea5d665224aa00d17f164fc2248dab9
+  GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
   HMFoundation: 4795c37d29edbccb3e2d04afb08ce5587aae0685
+  Swifter: 0955a05325dc182fabfb1468305aef887180e0f1
 
-PODFILE CHECKSUM: 77fd6158d0bca4d9a1a1ed3aa22058c440b65b7e
+PODFILE CHECKSUM: a19d8581abede74d770c8913ac64105b49b2e779
 
 COCOAPODS: 1.10.0.beta.2
