@@ -42,7 +42,17 @@
 				<string>auth-service-twitter</string>
 			</array>
 		</dict>
+        <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>fb370359364140692</string>
+        </array>
+        </dict>
 	</array>
+    <key>FacebookAppID</key>
+    <string>370359364140692</string>
+    <key>FacebookDisplayName</key>
+    <string>Auth Service</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>

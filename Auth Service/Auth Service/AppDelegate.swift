@@ -8,6 +8,7 @@
 import UIKit
 import AGConnectAuth
 import GoogleSignIn
+import FBSDKCoreKit
 import Swifter
 
 @main
@@ -18,6 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         AGCInstance.startUp()
         GIDSignIn.sharedInstance().clientID = "969297690404-18jp3tc9qg1v4rt9kn074oeluatkhea0.apps.googleusercontent.com"
+        
+        ApplicationDelegate.shared.application(
+            application,
+            didFinishLaunchingWithOptions: launchOptions
+        )
         return true
     }
     
@@ -25,8 +31,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     @available(iOS 9.0, *)
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
-        let callbackUrl = URL(string: TWITTER_URL_SCHEME)!
-        Swifter.handleOpenURL(url, callbackURL: callbackUrl)
+        ApplicationDelegate.shared.application(
+            app,
+            open: url,
+            sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+            annotation: options[UIApplication.OpenURLOptionsKey.annotation]
+        )
+        
         return GIDSignIn.sharedInstance().handle(url)
     }
     

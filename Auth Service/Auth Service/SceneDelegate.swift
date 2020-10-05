@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FBSDKCoreKit
 import Swifter
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -49,9 +50,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-        guard let context = URLContexts.first else { return }
+        guard let url = URLContexts.first?.url else {
+            return
+        }
+        // Facebook
+        ApplicationDelegate.shared.application(
+                UIApplication.shared,
+                open: url,
+                sourceApplication: nil,
+                annotation: [UIApplication.OpenURLOptionsKey.annotation]
+            )
+        // Twitter
         let callbackUrl = URL(string: TWITTER_URL_SCHEME)!
-        Swifter.handleOpenURL(context.url, callbackURL: callbackUrl)
+        Swifter.handleOpenURL(url, callbackURL: callbackUrl)
     }
 
 }

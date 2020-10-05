@@ -20,11 +20,7 @@ class GoogleAccountViewController: UIViewController, GIDSignInDelegate {
         // Do any additional setup after loading the view.
         
         GIDSignIn.sharedInstance().presentingViewController = self
-        
         GIDSignIn.sharedInstance().delegate = self
-        
-        // Automatically sign in the user.
-//        GIDSignIn.sharedInstance().restorePreviousSignIn()
         
         setSignInOutVisibility()
     }
@@ -32,7 +28,6 @@ class GoogleAccountViewController: UIViewController, GIDSignInDelegate {
     @IBAction func signInButton(_ sender: UIButton) {
         GIDSignIn.sharedInstance().signIn()
     }
-    
     
     @IBAction func signOutButton(_ sender: UIButton) {
         AGCAuth().signOut()

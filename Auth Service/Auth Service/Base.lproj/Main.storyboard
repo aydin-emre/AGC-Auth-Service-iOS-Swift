@@ -318,17 +318,58 @@
             </objects>
             <point key="canvasLocation" x="3884" y="113"/>
         </scene>
-        <!--View Controller-->
+        <!--Facebook Account View Controller-->
         <scene sceneID="2OK-nT-TBH">
             <objects>
-                <viewController id="CqE-qN-1uK" sceneMemberID="viewController">
+                <viewController id="CqE-qN-1uK" customClass="FacebookAccountViewController" customModule="Auth_Service" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q3Z-vr-bWy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="AN1-Lc-8jX">
+                                <rect key="frame" x="23" y="138" width="368" height="83"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in with Facebook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8co-cQ-fvW">
+                                        <rect key="frame" x="0.0" y="0.0" width="368" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vj9-OT-G0E">
+                                        <rect key="frame" x="0.0" y="47" width="368" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Sign In"/>
+                                        <connections>
+                                            <action selector="signInButton:" destination="esZ-4V-VDp" eventType="touchUpInside" id="bVP-1G-3k6"/>
+                                            <action selector="signInButton:" destination="CqE-qN-1uK" eventType="touchUpInside" id="evd-3b-o4B"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUl-Xp-pox">
+                                        <rect key="frame" x="0.0" y="83" width="368" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Sign Out"/>
+                                        <connections>
+                                            <action selector="signOutButton:" destination="esZ-4V-VDp" eventType="touchUpInside" id="Vzp-dz-zQX"/>
+                                            <action selector="signOutButton:" destination="CqE-qN-1uK" eventType="touchUpInside" id="tfI-M6-voQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="qud-4o-h79"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AN1-Lc-8jX" firstAttribute="top" secondItem="qud-4o-h79" secondAttribute="top" constant="50" id="LLe-NY-6Ym"/>
+                            <constraint firstItem="qud-4o-h79" firstAttribute="trailing" secondItem="AN1-Lc-8jX" secondAttribute="trailing" constant="23" id="RKR-c3-6h3"/>
+                            <constraint firstItem="AN1-Lc-8jX" firstAttribute="leading" secondItem="qud-4o-h79" secondAttribute="leading" constant="23" id="UOR-Ac-ZSt"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="U2M-OZ-H6g"/>
+                    <connections>
+                        <outlet property="signInButton" destination="vj9-OT-G0E" id="3g3-aP-7E3"/>
+                        <outlet property="signOutButton" destination="wUl-Xp-pox" id="4Oy-0v-tRN"/>
+                        <outlet property="titleLabel" destination="8co-cQ-fvW" id="tTM-nm-OFL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gyh-az-g8D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -24,7 +24,6 @@ class TwitterAccountViewController: UIViewController {
         
         setSignInOutVisibility()
     }
-    
 
     @IBAction func signInButton(_ sender: UIButton) {
         self.swifter = Swifter(consumerKey: TWITTER_API_KEY, consumerSecret: TWITTER_API_SECRET_KEY)
@@ -34,7 +33,6 @@ class TwitterAccountViewController: UIViewController {
             print("ERROR: Trying to authorize \(error)")
         })
     }
-    
     
     @IBAction func signOutButton(_ sender: UIButton) {
         AGCAuth().signOut()
@@ -71,6 +69,4 @@ class TwitterAccountViewController: UIViewController {
 
 }
 
-extension TwitterAccountViewController: SFSafariViewControllerDelegate {
-    
-}
+extension TwitterAccountViewController: SFSafariViewControllerDelegate {}

@@ -13,6 +13,7 @@
 		04295BA82523516C005FC3A9 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04295BA72523516C005FC3A9 /* EmailViewController.swift */; };
 		0444FB4925220648001E94AE /* PhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444FB4825220648001E94AE /* PhoneNumberViewController.swift */; };
 		04AADC23252355D00037F082 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AADC22252355D00037F082 /* UIViewControllerExtension.swift */; };
+		04B22B3E252AFCA300A37243 /* FacebookAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B22B3D252AFCA300A37243 /* FacebookAccountViewController.swift */; };
 		04C11C562527294D002D26CF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C11C552527294D002D26CF /* Constants.swift */; };
 		04C11C6D252756B4002D26CF /* TwitterAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C11C6C252756B4002D26CF /* TwitterAccountViewController.swift */; };
 		04D7FB242521E85900CC9619 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7FB232521E85900CC9619 /* AppDelegate.swift */; };
@@ -32,6 +33,7 @@
 		04295BA72523516C005FC3A9 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		0444FB4825220648001E94AE /* PhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberViewController.swift; sourceTree = "<group>"; };
 		04AADC22252355D00037F082 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		04B22B3D252AFCA300A37243 /* FacebookAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAccountViewController.swift; sourceTree = "<group>"; };
 		04C11C552527294D002D26CF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		04C11C6C252756B4002D26CF /* TwitterAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAccountViewController.swift; sourceTree = "<group>"; };
 		04D7FB202521E85900CC9619 /* Auth Service.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Auth Service.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +78,7 @@
 				0444FB4825220648001E94AE /* PhoneNumberViewController.swift */,
 				04295BA72523516C005FC3A9 /* EmailViewController.swift */,
 				0410D3BA2524A9840020D5CD /* GoogleAccountViewController.swift */,
+				04B22B3D252AFCA300A37243 /* FacebookAccountViewController.swift */,
 				04C11C6C252756B4002D26CF /* TwitterAccountViewController.swift */,
 			);
 			path = Controllers;
@@ -274,6 +277,7 @@
 				04295BA2252339D3005FC3A9 /* NSErrorExtensions.swift in Sources */,
 				04C11C6D252756B4002D26CF /* TwitterAccountViewController.swift in Sources */,
 				04D7FB242521E85900CC9619 /* AppDelegate.swift in Sources */,
+				04B22B3E252AFCA300A37243 /* FacebookAccountViewController.swift in Sources */,
 				04AADC23252355D00037F082 /* UIViewControllerExtension.swift in Sources */,
 				04D7FB262521E85900CC9619 /* SceneDelegate.swift in Sources */,
 				0410D3BB2524A9840020D5CD /* GoogleAccountViewController.swift in Sources */,
