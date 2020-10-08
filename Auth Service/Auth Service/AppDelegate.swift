@@ -9,7 +9,6 @@ import UIKit
 import AGConnectAuth
 import GoogleSignIn
 import FBSDKCoreKit
-import Swifter
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {

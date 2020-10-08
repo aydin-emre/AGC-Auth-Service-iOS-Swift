@@ -22,12 +22,13 @@ class TwitterAccountViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        swifter = Swifter(consumerKey: TWITTER_API_KEY, consumerSecret: TWITTER_API_SECRET_KEY)
+        
         setSignInOutVisibility()
     }
 
     @IBAction func signInButton(_ sender: UIButton) {
-        self.swifter = Swifter(consumerKey: TWITTER_API_KEY, consumerSecret: TWITTER_API_SECRET_KEY)
-        self.swifter.authorize(withCallback: URL(string: TWITTER_URL_SCHEME)!, presentingFrom: self, success: { accessToken, _ in
+        swifter.authorize(withCallback: URL(string: TWITTER_URL_SCHEME)!, presentingFrom: self, success: { accessToken, _ in
             self.signIn(with: accessToken)
         }, failure: { error in
             print("ERROR: Trying to authorize \(error)")

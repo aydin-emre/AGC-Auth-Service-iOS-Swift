@@ -7,7 +7,6 @@
 
 import UIKit
 import AGConnectAuth
-import FBSDKCoreKit
 import FBSDKLoginKit
 
 class FacebookAccountViewController: UIViewController {
@@ -24,8 +23,7 @@ class FacebookAccountViewController: UIViewController {
     }
     
     @IBAction func signInButton(_ sender: UIButton) {
-        let loginManager = LoginManager()
-        loginManager.logIn(permissions: ["email"], from: self) { (loginManagerLoginResult, error) in
+        LoginManager().logIn(permissions: ["email"], from: self) { (loginManagerLoginResult, error) in
             if let accessToken = loginManagerLoginResult?.token {
                 let credential = AGCFacebookAuthProvider.credential(withToken: accessToken.tokenString)
 
